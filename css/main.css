@@ -4,7 +4,7 @@ canvas {
 }
 
 .rgb-letter {
-  font-size: 6vw; /* fixed typo from "vm" to "vw" */
+  font-size: inherit; /* inherits size from header1 */
   transition: color 1.8s ease;
 }
 
@@ -20,6 +20,14 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; /* ensure centering */
+}
+
+.link1 svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-bottom: 2px; /* tweak to align with text baseline */
+  display: inline-block;
 }
 
 .image {
@@ -117,5 +125,13 @@ canvas {
 @media screen and (min-width: 1390px) {
   .header2 {
     font-size: 1.1vw;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .link1 {
+    display: inline-block;
+    font-size: 5vw;
+    margin: 0 8px;
   }
 }
