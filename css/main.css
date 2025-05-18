@@ -4,10 +4,8 @@ canvas {
 }
 
 .rgb-letter {
-  font-size: 6vm;
-  /* Adjust size as needed */
+  font-size: 6vw; /* fixed typo from "vm" to "vw" */
   transition: color 1.8s ease;
-  /* Smooth transition */
 }
 
 #particles-js {
@@ -21,10 +19,13 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center; /* ensure centering */
 }
 
 .image {
   border-radius: 50%;
+  display: block;
+  margin: 0 auto; /* center the image on mobile */
 }
 
 .header1 {
@@ -46,7 +47,7 @@ canvas {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 2.8vw;
   color: inherit;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 5px;
   transition: 0.5s;
 }
 
@@ -54,13 +55,35 @@ canvas {
   color: blue;
 }
 
+/* Media Queries */
 @media screen and (max-width: 785px) {
+  .center {
+    position: static;
+    transform: none;
+    margin-top: 10vh;
+    text-align: center;
+  }
+
   .header1 {
     font-size: 8vw;
   }
 
+  .header2 {
+    font-size: 3.5vw;
+  }
+
+  .header3 {
+    font-size: 4.5vw;
+  }
+
   .link1 {
     font-size: 4vw;
+    display: inline-block;
+  }
+
+  .image {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -74,11 +97,20 @@ canvas {
   }
 
   .header2 {
-    font-size: 2.5vw;
+    font-size: 4vw;
+  }
+
+  .header3 {
+    font-size: 5vw;
   }
 
   .link1 {
     font-size: 5vw;
+  }
+
+  .image {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
